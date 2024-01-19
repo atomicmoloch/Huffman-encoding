@@ -11,6 +11,8 @@ class BitInput {
   // Construct with an input stream
   BitInput(std::istream& is);
 
+  ~BitInput() = default;
+
   BitInput(const BitInput&) = default;
   BitInput(BitInput&&) = default;
   BitInput& operator=(const BitInput&) = default;
@@ -33,7 +35,7 @@ class BitOutput {
   BitOutput(std::ostream& os);
 
   // Flushes out any remaining output bits and trailing zeros, if any:
-  ~BitOutput(); //temp
+  ~BitOutput();
 
   BitOutput(const BitOutput&) = default;
   BitOutput(BitOutput&&) = default;
